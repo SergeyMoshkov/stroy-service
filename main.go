@@ -5,20 +5,22 @@ import (
 	"net/http"
 )
 
-func hello(w http.ResponseWriter, _ *http.Request) {
+func Home(w http.ResponseWriter, _ *http.Request) {
 	n, _ := fmt.Fprintf(w, "Hello world!")
-	_ = fmt.Sprintf("Types of bytes: %d", n)
+	res := fmt.Sprintf("Types of bytes: %d", n)
+	fmt.Println(res)
 }
 
-func about(w http.ResponseWriter, _ *http.Request) {
+func About(w http.ResponseWriter, _ *http.Request) {
 	n, _ := fmt.Fprintf(w, "About us!")
-	_ = fmt.Sprintf("Types of bytes: %d", n)
+	res := fmt.Sprintf("Types of bytes: %d", n)
+	fmt.Println(res)
 }
 
 func main() {
 
-	http.HandleFunc("/", hello)
-	http.HandleFunc("/about", about)
+	http.HandleFunc("/", Home)
+	http.HandleFunc("/about", About)
 
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		fmt.Println(err)
