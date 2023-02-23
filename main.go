@@ -5,12 +5,14 @@ import (
 	"net/http"
 )
 
-func hello(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello world!")
+func hello(w http.ResponseWriter, _ *http.Request) {
+	n, _ := fmt.Fprintf(w, "Hello world!")
+	_ = fmt.Sprintf("Types of bytes: %d", n)
 }
 
-func about(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "About us!")
+func about(w http.ResponseWriter, _ *http.Request) {
+	n, _ := fmt.Fprintf(w, "About us!")
+	_ = fmt.Sprintf("Types of bytes: %d", n)
 }
 
 func main() {
