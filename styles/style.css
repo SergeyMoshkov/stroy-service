@@ -1,0 +1,22 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');*/
+
+body {
+    rotation: 23deg;
+}
+
+h1 {
+    font-family: "Roboto", sans-serif, Tahoma ;
+    text-shadow: aqua;
+}
+
+p {
+    padding: 100px;
+    background-color: blueviolet;
+}
+
+.col {
+    padding: 100px;
+}
+
+
+
