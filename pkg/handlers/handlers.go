@@ -2,7 +2,7 @@ package handlers
 
 import (
 	"net/http"
-	"stroy-service/render"
+	"stroy-service/pkg/render"
 )
 
 // Home is the home page

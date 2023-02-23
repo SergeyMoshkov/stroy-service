@@ -3,12 +3,13 @@ package main
 import (
 	"fmt"
 	"net/http"
-	"stroy-service/handlers"
+	"stroy-service/pkg/handlers"
 )
 
 // main is the main function on our application
 func main() {
 
+	//http.FileServer(http.Dir("/static"))
 	http.HandleFunc("/about", handlers.About)
 	http.HandleFunc("/", handlers.Home)
 
