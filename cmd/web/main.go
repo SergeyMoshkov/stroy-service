@@ -9,7 +9,7 @@ import (
 // main is the main function on our application
 func main() {
 
-	//http.FileServer(http.Dir("/static"))
+	http.FileServer(http.Dir("/static"))
 	http.HandleFunc("/about", handlers.About)
 	http.HandleFunc("/", handlers.Home)
 
